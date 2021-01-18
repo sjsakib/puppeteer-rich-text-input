@@ -16,7 +16,9 @@ async function selectDropDown() {
 
   await page.select(selector1, 'site');
 
-  await page.select(selector2, "11")
+  // alternatively, we can use label
+  await page.focus(selector2);
+  await page.keyboard.type('Audio visual');
 }
 
 selectDropDown();
